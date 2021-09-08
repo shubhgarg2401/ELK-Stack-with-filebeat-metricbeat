@@ -1,0 +1,42 @@
+filebeat.inputs:
+  - type: log
+    enabled: false
+    paths:
+      - /var/log/*.log
+
+  - type: filestream
+    enabled: false
+    paths:
+      - /var/log/*.log
+
+filebeat.config.modules:
+  path: ${path.config}/modules.d/*.yml
+  reload.enabled: false
+
+setup.template.settings:
+  index.number_of_shards: 1
+  setup.kibana:
+  host: "https://IP.IP.IP.IP:5601"
+  username: "elastic"
+  password: "changeme"
+  ssl.enabled: true
+  ssl.certificate_authorities: "/home/ec2-user/elastic-stack/secrets/certs/ca/ca.crt"
+  ssl.certificate: "/home/ec2-user/elastic-stack/secrets/certs/kibana/kibana.crt"
+  ssl.key: "/home/ec2-user/elastic-stack/secrets/certs/kibana/kibana.key"
+
+output.elasticsearch:
+  hosts: ["IP.IP.IP.IP:9200"]
+  protocol: "https"
+  enabled: true
+  ssl.enabled: true
+  username: "elastic"
+  password: "changeme"
+
+  ssl.certificate_authorities:
+    ["/home/ec2-user/elastic-stack/secrets/certs/ca/ca.crt"]
+  ssl.certificate: "/home/ec2-user/elastic-stack/secrets/certs/elasticsearch/elasticsearch.crt"
+  ssl.key: "/home/ec2-user/elastic-stack/secrets/certs/elasticsearch/elasticsearch.key"
+
+processors:
+  - add_host_metadata:
+      when.not.contains.tags: forwarded

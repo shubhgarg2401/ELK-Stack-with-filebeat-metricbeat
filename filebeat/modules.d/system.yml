@@ -1,0 +1,9 @@
+- module: system
+  syslog:
+    enabled: true
+
+  auth:
+    enabled: true
+    var.paths:
+      - /var/log/audit/audit.log
+

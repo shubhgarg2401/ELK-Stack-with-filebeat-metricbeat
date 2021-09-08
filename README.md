@@ -1,2 +1,1 @@
-# ELK-Stack-with-filebeat-metricbeat
-ELK-Stack-with-filebeat-metricbeat
+## ELK STACK complete setup with filebeat and metric beat configured
