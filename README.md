@@ -39,3 +39,4 @@ ________________________________________________________________________________
 ![ngixn metricbeat](https://user-images.githubusercontent.com/53488130/132842084-d9d20af5-af4e-4712-9692-c908fa1a4021.PNG)
 
 
+## The data received by the above metrics can help scale your business and run analystics in a more efficient and cost effective way.
