@@ -5,6 +5,11 @@
 ## WHILE SETTING UP THIS CONFIGURATION WOULD TAKE A SKILLED ENGINEER DAYS/WEEKS or AN UNSKILLED ENGINEER MONTHS
 ## THE REPOSITITORY'S CONFIGURATION AND THE SCRIPT CREATED BY US ( NOT INVCLUDED IN THE REPO ) WILL REDUCE THE WORK TO 1 DAY.
 ## SAVING NOT JUST TIME BUT WILL ALSO PROVIDE YOU A CLEAN AND ERROR FREE CONFIGURATION.
+
+# FULL SETUP INCLUDES
+1. NGINX server and Reverse Proxy
+2. ELK 3 node cluster With filebeat and Metricbeat Configured
+3. TLS/SSL verification enabled with config. for secure https endpoints
 ________________________________________________________________________________________________________________________________________________________________________________
 ###LOGIN PAGE
 
