@@ -15,7 +15,7 @@ filebeat.config.modules:
 
 setup.template.settings:
   index.number_of_shards: 1
-  setup.kibana:
+setup.kibana:
   host: "https://IP.IP.IP.IP:5601"
   username: "elastic"
   password: "changeme"
